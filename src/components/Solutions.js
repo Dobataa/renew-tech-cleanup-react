@@ -2,7 +2,7 @@ import useFetch from "../hooks/useFetch";
 import Solution from "./Solution";
 
 function Solutions(){
-    let solutions = useFetch();
+    let solutions = useFetch('http://localhost:3030/data/solutions?sortBy=_createdOn%20desc');
     
     return (
         <>

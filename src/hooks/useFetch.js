@@ -4,7 +4,7 @@ const useFetch = (url) => {
     const [solutions, setSolutions] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3030/data/solutions?sortBy=_createdOn%20desc')
+        fetch(url)
             .then(res => res.json())
             .then(response => {
                 setSolutions(response)

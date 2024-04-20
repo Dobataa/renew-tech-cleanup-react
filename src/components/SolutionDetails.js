@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import GetOne from "./GetOne";
+import useFetch from "../hooks/useFetch";
 
 function SolutionDetails(){
     const { id } = useParams();
 
-    let solution = GetOne(id);
+    let solution = useFetch(`http://localhost:3030/data/solutions/${id}`);
 
     return (
         <section id="details">
